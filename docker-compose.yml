@@ -1,0 +1,10 @@
+version: "3"
+services:
+  web:
+    build:
+      context: ./reactjs/demo
+      dockerfile: Dockerfile
+    image: my_react
+    container_name: c1
+    ports:
+      - 8888:80
