@@ -1,5 +1,13 @@
 version: "3"
+volumes:
+  demo:
+
 services:
+  db:
+    image: postgres
+    volumes:
+      - demo:/var/lib/postgresql/data
+
   web:
     build:
       context: ./reactjs/demo
