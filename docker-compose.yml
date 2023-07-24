@@ -6,7 +6,11 @@ services:
   db:
     image: postgres
     volumes:
-      - demo:/var/lib/postgresql/data
+      - ./demo:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=demo
+      - POSTGRES_USER=user1
+      - POSTGRES_PASSWORD=value
 
   web:
     build:
