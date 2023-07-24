@@ -8,3 +8,9 @@ services:
     container_name: c1
     ports:
       - 8888:80
+      
+  nodejs:
+    build: ./nodejs
+    image: my_node
+    ports:
+      - 3000:3000
